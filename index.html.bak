@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voorhees Tune & Lube | Auto Mechanic in Voorhees, NJ</title>
+<meta name="description" content="Voorhees Tune & Lube - Trusted auto mechanic serving Voorhees, NJ and surrounding areas. Call (856) 429-8863 for a free estimate.">
+<meta property="og:title" content="Voorhees Tune & Lube | Auto Mechanic in Voorhees, NJ">
+<meta property="og:description" content="Trusted auto mechanic serving Voorhees, NJ. 4.8 stars on Google. Call today!">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Voorhees Tune & Lube",
+  "telephone": "(856) 429-8863",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "104 Somerdale Rd",
+    "addressLocality": "Voorhees",
+    "addressRegion": "NJ",
+    "addressCountry": "US"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "reviewCount": "59"
+  }
+}
+</script>
+<style>
+  :root {
+    --brand: #FFC107;
+    --brand-dark: #b78a05;
+    --brand-light: #fff5d9;
+    --text: #1a1a2e;
+    --text-muted: #64748b;
+    --surface: #f8fafc;
+    --white: #ffffff;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ========== HERO ========== */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px 100px;
+    overflow: hidden;
+    background-image: url('https://images.unsplash.com/photo-1625047509248-ec889cbff17f?w=1600&q=80&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      160deg,
+      rgba(0,0,0,0.72) 0%,
+      rgba(0,0,0,0.55) 50%,
+      rgba(0,0,0,0.68) 100%
+    );
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 860px;
+    width: 100%;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--brand);
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.2rem, 6vw, 4rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+  }
+
+  .hero-tagline {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 28px;
+    font-weight: 400;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .stars { color: #FFC107; letter-spacing: 2px; font-size: 1.1em; }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--brand);
+    color: #fff;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+  }
+
+  .hero-address {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    margin-top: 20px;
+  }
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.55);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    animation: bounce 2s ease-in-out infinite;
+  }
+
+  .scroll-indicator svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.55; }
+    50% { transform: translateX(-50%) translateY(8px); opacity: 1; }
+  }
+
+  /* ========== SECTION BASE ========== */
+  section { padding: 80px 20px; }
+
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    display: inline-block;
+    color: var(--brand);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 16px;
+    line-height: 1.15;
+  }
+
+  .section-subtitle {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 540px;
+    margin-bottom: 48px;
+  }
+
+  /* Fade-in animation */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-up:nth-child(2) { transition-delay: 0.1s; }
+  .fade-up:nth-child(3) { transition-delay: 0.2s; }
+  .fade-up:nth-child(4) { transition-delay: 0.3s; }
+  .fade-up:nth-child(5) { transition-delay: 0.4s; }
+  .fade-up:nth-child(6) { transition-delay: 0.5s; }
+
+  /* ========== SERVICES ========== */
+  .services-section { background: var(--surface); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .service-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px 28px;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    cursor: default;
+  }
+
+  .service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    border-color: var(--brand);
+  }
+
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--brand-light);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+  }
+
+  .service-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  .service-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+
+  /* ========== ABOUT ========== */
+  .about-section { background: var(--white); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .about-text {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+    margin-bottom: 24px;
+  }
+
+  .trust-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .trust-badge {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 20px 24px;
+    border-left: 4px solid var(--brand);
+  }
+
+  .trust-badge-icon { font-size: 1.8rem; flex-shrink: 0; }
+
+  .trust-badge-text strong {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+  }
+
+  .trust-badge-text span {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  /* ========== TESTIMONIALS ========== */
+  .testimonials-section {
+    background: linear-gradient(135deg, var(--brand-dark) 0%, var(--brand) 100%);
+    color: #fff;
+  }
+
+  .testimonials-section .section-title { color: #fff; }
+  .testimonials-section .section-label { color: rgba(255,255,255,0.7); }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .testimonial-card {
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 16px;
+    padding: 32px 28px;
+  }
+
+  .testimonial-stars { color: #FFC107; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 16px; }
+
+  .testimonial-text {
+    font-size: 0.975rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.92);
+    font-style: italic;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .author-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .author-name {
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #fff;
+  }
+
+  .author-location {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.65);
+  }
+
+  /* ========== CONTACT / FOOTER ========== */
+  .contact-section { background: var(--surface); }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  .contact-info h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: var(--text);
+  }
+
+  .contact-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+
+  .contact-detail-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--brand-light);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .contact-detail-text strong {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 2px;
+  }
+
+  .contact-detail-text span {
+    font-size: 1rem;
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .contact-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--brand);
+    color: #fff;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 28px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .contact-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.22);
+  }
+
+  .contact-map-placeholder {
+    background: #e2e8f0;
+    border-radius: 16px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    padding: 32px;
+    text-align: center;
+    border: 2px dashed #cbd5e1;
+  }
+
+  .contact-map-placeholder span { font-size: 2.5rem; }
+  .contact-map-placeholder strong { color: var(--text); font-size: 1rem; display: block; margin-bottom: 4px; }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: #0f172a;
+    color: #94a3b8;
+    padding: 32px 20px;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  footer a { color: #94a3b8; text-decoration: none; transition: color 0.2s; }
+  footer a:hover { color: #fff; }
+
+  .footer-inner { max-width: 800px; margin: 0 auto; }
+
+  .footer-brand {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+  }
+
+  .footer-divider {
+    width: 48px;
+    height: 3px;
+    background: var(--brand);
+    border-radius: 2px;
+    margin: 16px auto;
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 768px) {
+    .hero { background-attachment: scroll; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+    .services-grid { grid-template-columns: 1fr; }
+    section { padding: 60px 20px; }
+  }
+
+  @media (max-width: 480px) {
+    .hero-cta { font-size: 1rem; padding: 16px 28px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-badge">Auto Mechanic</div>
+    <h1>Voorhees Tune & Lube</h1>
+    <p class="hero-tagline">Honest Auto Repair — Keeping You Safely on the Road.</p>
+    <div class="hero-rating">
+      <span class="stars">★★★★½</span>
+      <span>4.8/5 &nbsp;·&nbsp; 59 Reviews</span>
+    </div>
+    <br>
+    <a href="tel:+18564298863" class="hero-cta">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14h0z"/></svg>
+      Call Now: (856) 429-8863
+    </a>
+    
+    <p class="hero-address">📍 104 Somerdale Rd, Voorhees, NJ</p>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services-section" id="services">
+  <div class="section-inner">
+    <span class="section-label fade-up">What We Do</span>
+    <h2 class="section-title fade-up">Our Services</h2>
+    <p class="section-subtitle fade-up">Professional, reliable service backed by years of experience and a commitment to quality.</p>
+    <div class="services-grid">
+            <div class="service-card fade-up">
+        <div class="service-icon">🛢️</div>
+        <h3>Oil Changes & Tune-Ups</h3>
+        <p>Full-service oil and filter change using quality conventional or synthetic oil.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🛑</div>
+        <h3>Brake Service</h3>
+        <p>Complete brake inspection, pad replacement, and rotor resurfacing or replacement.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">⚙️</div>
+        <h3>Engine Diagnostics</h3>
+        <p>Advanced engine diagnostics and repair from minor tune-ups to major overhauls.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">🔄</div>
+        <h3>Tire Service</h3>
+        <p>Thorough, efficient service that gets the job done right the first time.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">❄️</div>
+        <h3>AC Repair</h3>
+        <p>Diagnose and repair all makes and models of central AC and mini-split systems.</p>
+      </div>
+      <div class="service-card fade-up">
+        <div class="service-icon">📋</div>
+        <h3>State Inspections</h3>
+        <p>Fast, certified NJ state vehicle inspection at your convenience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about-section" id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div>
+        <span class="section-label fade-up">About Us</span>
+        <h2 class="section-title fade-up">Why Voorhees Tune & Lube?</h2>
+        <p class="about-text fade-up">Professional Auto Mechanic for residential and commercial properties. We deliver reliable solutions you can trust.</p>
+      </div>
+      <div class="trust-badges">
+        <div class="trust-badge fade-up">
+          <span class="trust-badge-icon">🛡️</span>
+          <div class="trust-badge-text">
+            <strong>Licensed &amp; Insured</strong>
+            <span>Fully licensed, bonded, and insured for your peace of mind.</span>
+          </div>
+        </div>
+        <div class="trust-badge fade-up">
+          <span class="trust-badge-icon">💬</span>
+          <div class="trust-badge-text">
+            <strong>Free Estimates</strong>
+            <span>Transparent pricing with no hidden fees or surprise charges.</span>
+          </div>
+        </div>
+        <div class="trust-badge fade-up">
+          <span class="trust-badge-icon">⭐</span>
+          <div class="trust-badge-text">
+            <strong>Satisfaction Guaranteed</strong>
+            <span>We stand behind every job we do — your satisfaction is our priority.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials-section" id="reviews">
+  <div class="section-inner">
+    <span class="section-label fade-up">What Customers Say</span>
+    <h2 class="section-title fade-up">Real Reviews</h2>
+    <p class="section-subtitle fade-up" style="color:rgba(255,255,255,0.75);">Trusted by homeowners and businesses throughout Voorhees, NJ and the surrounding area.</p>
+    <div class="testimonials-grid">
+            <div class="testimonial-card fade-up">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Took my car in not knowing what the problem was. They diagnosed it fast, gave me a fair quote, and had it done the same day."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">CN</div>
+          <div>
+            <div class="author-name">Chris N.</div>
+            <div class="author-location">Pennsauken, NJ</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Honest shop — they told me I didn't need the expensive repair I was worried about. Will definitely be back for all my car needs."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AP</div>
+          <div>
+            <div class="author-name">Angela P.</div>
+            <div class="author-location">Camden, NJ</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Professional, quick, and fair. My brakes feel brand new. Great local shop that actually cares about their customers."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SM</div>
+          <div>
+            <div class="author-name">Steve M.</div>
+            <div class="author-location">Cherry Hill, NJ</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact-section" id="contact">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Get In Touch</h2>
+        <div class="contact-detail fade-up">
+          <div class="contact-detail-icon">📞</div>
+          <div class="contact-detail-text">
+            <strong>Phone</strong>
+            <span>(856) 429-8863</span>
+          </div>
+        </div>
+                <div class="contact-detail fade-up">
+          <div class="contact-detail-icon">📍</div>
+          <div class="contact-detail-text">
+            <strong>Address</strong>
+            <span>104 Somerdale Rd, Voorhees, NJ</span>
+          </div>
+        </div>
+        <div class="contact-detail fade-up">
+          <div class="contact-detail-icon">🕐</div>
+          <div class="contact-detail-text">
+            <strong>Hours</strong>
+            <span>+18564298863" class="contact-cta"></span>
+          </div>
+        </div>
+        <a href="tel:+18564298863" class="contact-cta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14h0z"/></svg>
+          Call Now: (856) 429-8863
+        </a>
+      </div>
+      <div class="contact-map-placeholder fade-up">
+        <span>📍</span>
+        <div>
+          <strong>Voorhees Tune & Lube</strong>
+          104 Somerdale Rd
+          <br>Voorhees, NJ
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Voorhees Tune & Lube</div>
+    <p>Auto Mechanic &bull; Voorhees, NJ</p>
+    <div class="footer-divider"></div>
+    <p>&copy; 2026 Voorhees Tune & Lube. All rights reserved.</p>
+    <p style="margin-top:8px;">Website by <a href="https://wcrstudios.com" target="_blank" rel="noopener">WCR Studios</a></p>
+  </div>
+</footer>
+
+<script>
+  // Intersection Observer for fade-up animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // iOS parallax fallback — disable background-attachment:fixed on mobile
+  if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+    document.querySelector('.hero').style.backgroundAttachment = 'scroll';
+  }
+</script>
+</body>
+</html>
